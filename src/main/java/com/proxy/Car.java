@@ -1,4 +1,4 @@
-package com;
+package com.proxy;
 
 import java.util.Random;
 

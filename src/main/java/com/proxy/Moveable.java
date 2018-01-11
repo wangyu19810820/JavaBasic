@@ -1,4 +1,4 @@
-package com;
+package com.proxy;
 
 public interface Moveable {
 

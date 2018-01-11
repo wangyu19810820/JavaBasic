@@ -1,4 +1,6 @@
-package com;
+package com.proxy.static_proxy;
+
+import com.proxy.Moveable;
 
 public class CarAggregateProxy implements Moveable {
 

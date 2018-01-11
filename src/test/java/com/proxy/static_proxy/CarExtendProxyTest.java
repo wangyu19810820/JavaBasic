@@ -1,5 +1,7 @@
-package com;
+package com.proxy.static_proxy;
 
+import com.proxy.Moveable;
+import com.proxy.static_proxy.CarExtendProxy;
 import org.junit.Test;
 
 public class CarExtendProxyTest {

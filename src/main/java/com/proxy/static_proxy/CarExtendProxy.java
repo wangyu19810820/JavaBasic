@@ -1,4 +1,6 @@
-package com;
+package com.proxy.static_proxy;
+
+import com.proxy.Car1;
 
 public class CarExtendProxy extends Car1 {
 
