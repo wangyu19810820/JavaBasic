@@ -1,0 +1,10 @@
+<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+    <property name="dataSource" ref="dataSource" />
+    <!-- 其他配置 -->
+    <!-- configLocation：用于指定Mybatis的配置文件位置 -->
+    <property name="configLocation" value="classpath:mybatis-configuration.xml"></property>
+    <property name="mapperLocations" value="classpath*:com/hsnn/basic/common/mappers/sqlserver/**/*.xml"></property>
+
+    <!-- 指定Mybatis自定义TypeHandler -->
+    <property name="typeHandlers" ref="zTypeTypeHandler"/>
+</bean>

@@ -7,10 +7,11 @@ Java静态代理主要分成继承和聚合两类
 
 
 JDK动态代理
-其机制基于接口，被代理对象需实现接口
-代理的功能代码写在InvocationHandler接口实现类的invoke方法中，
-第二个参数method是代理方法，第三个参数是调用参数
-Proxy.newProxyInstance获取动态代理
+1.其机制基于接口，被代理对象需实现接口
+2.代理的功能代码写在InvocationHandler接口实现类的invoke方法中，第二个参数method是代理方法，第三个参数是调用参数
+3.Proxy.newProxyInstance获取动态代理
+4.对于API使用者，只能追踪到接口，和实际实现类$ProxyXXX（自动生成）。
+虽然封装隐藏比较好，但是因为无法使用原始类内部API，有时也感觉不方便。
 
 CGLIB动态代理
 其机制基于继承，被代理对象不能是final型的

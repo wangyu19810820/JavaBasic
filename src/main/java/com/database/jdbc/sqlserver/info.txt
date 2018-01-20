@@ -1,0 +1,16 @@
+表值参数（Table-Valued Parameter），是SQLServer的一种自定义类型，在其他数据库中可能也有类似类型。
+它描述了表结构，可用于封装该表的数据。
+在java中，可用于传递某张表的多行数据给数据库（SQLServer）。
+可用于预处理SQL语句（PreparedStatement）的参数，也可用于存储过程的参数。
+
+微软官方资料（https://docs.microsoft.com/en-us/sql/connect/jdbc/using-table-valued-parameters）
+介绍了如何在jdbc中使用表值参数传递数据。
+数据可封装在3种类型中：SQLServerDataTable，ResultSet，ISQLServerDataRecord。
+1.SQLServerDataTable可方便的将一组静态数据（List<XxxxModel>）转换成表值参数数据
+2.ResultSet是数据结果集
+3.ISQLServerDataRecord是一个接口，需有实现类。类似一个“数据源”，可用于特殊用途。
+假如用于List<XxxxModel>数据，转换较麻烦。
+
+针对不同数据库，jdbc有一个跨数据库的api，在某些框架内（Mybatis）“只能”使用这些通用api
+1.PreparedStatement的类有一个setObject方法，调用存储过程，可用此方法传递表值参数。
+2.PreparedStatement的类还有一个setArray的方法，我不太清楚其用法，今后可多学习。

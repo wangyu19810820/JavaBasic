@@ -1,0 +1,5 @@
+<update id="callTableType" parameterType="list"  statementType="CALLABLE">
+    <![CDATA[
+        {call z_proc(#{list,typeHandler=com.hsnn.basic.common.models.ZTypeTypeHandler})}
+        ]]>
+</update>
