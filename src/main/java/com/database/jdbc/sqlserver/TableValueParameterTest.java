@@ -20,7 +20,7 @@ public class TableValueParameterTest {
 
     public static void main(String[] args) throws Exception {
         TableValueParameterTest test = new TableValueParameterTest();
-        test.test2();
+        test.test1();
     }
 
     // 调用sql语句，传递SQLServerDataTable
@@ -28,7 +28,7 @@ public class TableValueParameterTest {
         Connection connection = getJDBCConnection();
 
         SQLServerDataTable sourceDataTable = new SQLServerDataTable();
-        sourceDataTable.addColumnMetadata("id" , Types.INTEGER);
+        sourceDataTable.addColumnMetadata("Id" , Types.INTEGER);
         sourceDataTable.addColumnMetadata("name" , Types.VARCHAR);
         sourceDataTable.addRow(1, "a");
         sourceDataTable.addRow(2, "b");
