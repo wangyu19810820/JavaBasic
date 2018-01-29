@@ -1,0 +1,8 @@
+包括java静态代理的内容
+jdk动态代理，cglib动态代理的内容
+jdk动态代理的原理分析和简单模拟
+
+jdbc超时机制的网文和demo
+jdbc调用SQLServer的表值参数
+
+apache commons-beanutils使用示例
