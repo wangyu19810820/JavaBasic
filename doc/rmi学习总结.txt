@@ -1,0 +1,22 @@
+Java 远程方法调用，即 Java RMI（ Java Remote Method Invocation ） 。顾名思义，可以使客户机上运行的程序能够调用远程服务器上的对象（方法）
+
+1.定义远程接口（服务端）
+远程接口定义出可以让客户远程调用的方法
+此接口必须实现 java.rmi.Remote 接口，同时其中声明的所有方法，需要抛出RemoteException异常
+
+2.实现远程接口（服务端）
+远程接口的实现类如果想要被远程访问，可以有如下实现方式
+1..继承java.rmi.server.UnicastRemoteObject类
+2..构造函数中添加UnicastRemoteObject.exportObject(this, portNum);
+   portNum设为0，表示任何合适的端口都可用来监听客户连接
+方式一和方式二等价，UnicastRemoteObject内部实现就是方式二，且设定端口为0（任何端口都可用）
+
+3.启动注册表，并注册远程服务
+Registry registry1 = LocateRegistry.createRegistry(1099);
+DemoService service = new DemoServerImpl();
+registry1.bind("service_name_1", service);
+
+4.客户端调用
+Registry registry = LocateRegistry.getRegistry("localhost", 1099);
+DemoService service = (DemoService) registry.lookup("service_name_1");
+service.someRemoteMethod();
