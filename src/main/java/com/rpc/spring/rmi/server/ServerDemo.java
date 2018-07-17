@@ -8,8 +8,6 @@ public class ServerDemo {
         try {
             AnnotationConfigApplicationContext context =
                     new AnnotationConfigApplicationContext(SpringRmiServerConfig.class);
-//        context.start();
-//        System.in.read();
         } catch (Exception e) {
             e.printStackTrace();
         }

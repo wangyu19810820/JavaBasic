@@ -1,0 +1,6 @@
+1.Spring提供了对RMI的支持，好处是核心代码无需关心远程Service的注册和获取。
+可以像使用普通Service一样使用远程Service
+2.编写服务器端的Service和Service实现类
+3.服务端配置RmiServiceExporter，并注册Service
+4.客户端配置RmiProxyFactoryBean，并获取Service
+5.客户端可以像使用普通Service一样，使用远程Service
